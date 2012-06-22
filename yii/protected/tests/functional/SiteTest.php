@@ -5,7 +5,7 @@ class SiteTest extends WebTestCase
 	public function testIndex()
 	{
 		$this->open('');
-		$this->assertTextPresent('Welcome');
+		$this->assertTextPresent('Gomeeki Australia Postcode');
 	}
 
 	public function testContact()
@@ -34,7 +34,7 @@ class SiteTest extends WebTestCase
 		$this->type('name=LoginForm[username]','demo');
 		$this->click("//input[@value='Login']");
 		$this->waitForTextPresent('Password cannot be blank.');
-		$this->type('name=LoginForm[password]','demo');
+		$this->type('name=LoginForm[password]','G0m33k1$');
 		$this->clickAndWait("//input[@value='Login']");
 		$this->assertTextNotPresent('Password cannot be blank.');
 		$this->assertTextPresent('Logout');

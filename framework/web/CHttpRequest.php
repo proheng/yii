@@ -62,7 +62,7 @@ class CHttpRequest extends CApplicationComponent
 	/**
 	 * @var boolean whether cookies should be validated to ensure they are not tampered. Defaults to false.
 	 */
-	public $enableCookieValidation=false;
+	public $enableCookieValidation=true;
 	/**
 	 * @var boolean whether to enable CSRF (Cross-Site Request Forgery) validation. Defaults to false.
 	 * By setting this property to true, forms submitted to an Yii Web application must be originated
@@ -72,12 +72,12 @@ class CHttpRequest extends CApplicationComponent
 	 * the needed HTML forms in your pages.
 	 * @see http://seclab.stanford.edu/websec/csrf/csrf.pdf
 	 */
-	public $enableCsrfValidation=false;
+	public $enableCsrfValidation=true;
 	/**
 	 * @var string the name of the token used to prevent CSRF. Defaults to 'YII_CSRF_TOKEN'.
 	 * This property is effectively only when {@link enableCsrfValidation} is true.
 	 */
-	public $csrfTokenName='YII_CSRF_TOKEN';
+	public $csrfTokenName='GOMEEKI_CSRF_TOKEN';
 	/**
 	 * @var array the property values (in name-value pairs) used to initialize the CSRF cookie.
 	 * Any property of {@link CHttpCookie} may be initialized.
